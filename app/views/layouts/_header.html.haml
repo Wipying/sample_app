@@ -1,0 +1,9 @@
+%header
+	%nav.navbar.navbar-fixed-top.navbar-inverse{role: 'navigation'}
+		.navbar-header
+			= link_to 'Sample App', root_path, {class: 'navbar-brand', id:'logo'}
+		.navbar-collapse.collapse.navbar-right
+			%ul.nav.navbar-nav
+				%li= link_to "Home",		root_path
+				%li= link_to "Help",		help_path
+				%li= link_to "Sign in", '#'
