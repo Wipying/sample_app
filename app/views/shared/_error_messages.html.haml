@@ -1,0 +1,8 @@
+- if @errors and @errors.any?
+	#error_explanation
+		.alert.alert-danger
+			The form contains
+			= pluralize(@errors.count, "error")
+		%ul
+			- @errors.full_messages.each do |msg|
+				%li= "#{msg}"
