@@ -41,3 +41,8 @@ RSpec.configure do |config|
   config.order = "random"
   config.include Capybara::DSL
 end
+
+module DisableFlashSweeping
+  def sweep
+  end
+end
