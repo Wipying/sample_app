@@ -24,11 +24,7 @@ begin
 
 		describe "with valid information" do
 			let(:user){FactoryGirl.create(:user)}
-			before { 
-				fill_in "Email",    with: user.email.upcase
-        fill_in "Password", with: user.password
-        click_button "Sign in" 
-      }
+			before { valid_signin(user) }
 			it {should have_title(user.name)}
 			it {should have_link('Profile', href: user_path(user))}
 			it {should have_link('Sign out', href: signout_path)}
